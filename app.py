@@ -20,6 +20,20 @@ class Data(db.Model):
         self.word=word
         self.defination=defination
 
+class Users(db.Model):
+    __tablename__='registration data'
+    id=db.Column(db.Integer, primary_key=True)
+    name=db.Column(db.Text, unique=False)
+    email=db.Column(db.Text, unique=True)
+    username=db.Column(db.Text, unique=True)
+    password=db.Column(db.Text, unique=False)
+
+    def __init__(self,name,email,username,password):
+        self.name=name
+        self.email=email
+        self.username=username
+        self.password=password
+
 @app.route("/index")
 def index():
     return render_template("index.html")
@@ -45,14 +59,33 @@ class RegisterForm(Form):
     username=StringField('Username',[validators.length(min=4, max=25)])
     email=StringField('Email',[validators.length(min=6, max=50)])
     password=PasswordField('Password',[validators.DataRequired(),
-    validators.EqualTo('Confirm', message='Passwords do not match')])
+    validators.EqualTo('confirm', message='Passwords do not match')])
     confirm=PasswordField('Confirm Password')
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form=RegisterForm(request.form)
     if request.method=='POST' and form.validate():
-        return render_template('registration.html')
+        name= form.name.data
+        email=form.email.data
+        username=form.username.data
+        password=sha256_crypt.encrypt(str(form.password.data))
+        users=Users(name,email,username,password)
+        db.session.add(users)
+        db.session.commit()
+        #flash('You are registered', 'success')
+        return redirect(url_for('main'))
     return render_template('registration.html', form=form)
+
+@app.route('/panel', methods=['GET','POST'])
+def panel():
+    username=request.form["username"]
+    password=request.form["password"]
+    return render_template('panel.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 
 
 if __name__== "__main__":
