@@ -76,18 +76,38 @@ def register():
         return redirect(url_for('main'))
     return render_template('registration.html', form=form)
 
-@app.route('/panel', methods=['GET','POST'])
-def panel():
-    username=request.form["username"]
-    password=request.form["password"]
-    return render_template('panel.html')
-
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
+    if request.method=='POST':
+        username=request.form["username"]
+        password=request.form["password"]
+        usernamecandidate=Users.query.filter_by(username=username).first()
+        if usernamecandidate != None:
+            if sha256_crypt.verify(password,usernamecandidate.password):
+                print(" everything matched")
+                session['logged']=True
+                session['username']=username
+                return redirect(url_for('panel'))
+            else:
+                print("****")
+                error='wrong password'
+                return render_template('login.html',error=error)
+        else:
+            error=' username not found'
+            print("NONE matched")
+            return render_template('login.html',error=error)
     return render_template('login.html')
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+@app.route('/panel')
+def panel():
+    return render_template('panel.html')
 
 
 
 if __name__== "__main__":
+    app.secret_key='akram123'
     app.debug=True
     app.run()
