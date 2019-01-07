@@ -4,8 +4,13 @@
 	<title> Dictionary</title>
 </head>
 <body>
-	<div class="container">
-		<h1> Online Dictionary</h1>
+
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Fluid jumbotron</h1>
+	    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+	  </div>
+  </div>
 		<h3>Put the word: </h3>
 		<div>
 			{{text | safe}}
@@ -14,7 +19,6 @@
 			<input type="text" name="word" required>
 			<button type="submit">Submit</button>
 		</form>
-	</div>
-
+	
 </body>
 </html>
