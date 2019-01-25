@@ -3,6 +3,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 #from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
+from functools import wraps
 
 
 app=Flask(__name__)
@@ -97,11 +98,22 @@ def login():
             print("NONE matched")
             return render_template('login.html',error=error)
     return render_template('login.html')
+
+def logged_in(s):
+    @wraps(s)
+    def wrap(*args, **kwargs):
+        if 'logged' in session:
+            return s(*args, **kwargs)
+        else:
+            return redirect(url_for('login'))
+    return wrap
+
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('login'))
 @app.route('/panel')
+@logged_in
 def panel():
     return render_template('panel.html')
 
