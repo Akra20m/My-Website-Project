@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session, logging
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 #from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
@@ -35,22 +35,26 @@ class Users(db.Model):
         self.username=username
         self.password=password
 
-@app.route("/index")
+# @app.route("/index")
+# def index():
+#     return render_template("index.html")
+@app.route("/index", methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
-@app.route("/answer", methods=['POST'])
-def answer():
-    #words=request.form["word"]
-    words=request.form["word"].lower().capitalize()
-    print(words)
+    if request.method=='POST':
+        #words=request.form["word"]
+        words=request.form["word"].lower().capitalize()
+        print(words)
 
-    #
-    #news=Data.query.all()
-    news=Data.query.filter_by(word=words).first()
-    print(news)
-    if news!=None:
-        return render_template("answer.html", mynews=news)
-    return render_template("index.html",text="We don't have the meaning for that, try again")
+        #
+        #news=Data.query.all()
+        news=Data.query.filter_by(word=words).first()
+        print(news)
+        if news!=None:
+            #return render_template("answer.html", mynews=news)
+            return render_template("index.html", mynews=news.defination,mynews1=news.word)
+        return render_template("index.html",text="We don't have the meaning for that, try again")
+    if request.method=='GET':
+        return render_template("index.html")
 @app.route("/")
 def main():
     return render_template("main.html")
@@ -121,5 +125,7 @@ def panel():
 
 if __name__== "__main__":
     app.secret_key='akram123'
+    #app.jinja_env.auto_reload = True
+    #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
     app.run()

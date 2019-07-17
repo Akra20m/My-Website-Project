@@ -9,7 +9,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,10 +25,26 @@
       </div>
     </div>
   </nav>
+<div class="container">
+<h3> Welcome {{session.username}}  </h3>
 
-<h1> Thanks {{session.username}} for login </h1>
-
-<a href="/logout">Logout</a>
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Start Quiz 1
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" id="quiz">
+		<div id="question"></div>
+		<label><input type="radio" name="choice" value="1" onclick="activate();" /><span id="A"></span></label>
+		<label><input type="radio" name="choice" value="2" onclick="activate();"/><span id="B"></span></label>
+		<label><input type="radio" name="choice" value="3" onclick="activate();"/><span id="C"></span></label>
+		<label><input type="radio" name="choice" value="4" onclick="activate();"/><span id="D"></span></label>
+		<button type="button" class="btn btn-primary" id="next" onclick="nextQuestion();" disabled>Next question</button>
+  </div>
+	<div id="score" style="display:none;"> </div>
+</div>
+<script type="text/javascript" src="../static/panel.js"></script>
 
 </body>
 </html>
