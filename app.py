@@ -7,7 +7,7 @@ from functools import wraps
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:202601@localhost/project1'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:****@localhost/project1'
 db=SQLAlchemy(app)
 
 class Data(db.Model):
@@ -124,7 +124,7 @@ def panel():
 
 
 if __name__== "__main__":
-    app.secret_key='akram123'
+    app.secret_key='****'
     #app.jinja_env.auto_reload = True
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
