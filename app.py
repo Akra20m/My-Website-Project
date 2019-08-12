@@ -7,7 +7,7 @@ from functools import wraps
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:****@localhost/project1'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
 db=SQLAlchemy(app)
 
 class Data(db.Model):
@@ -121,6 +121,9 @@ def logout():
 def panel():
     return render_template('panel.html')
 
+@app.route('/quiz')
+def quiz():
+    return render_template('quiz.html')
 
 
 if __name__== "__main__":
