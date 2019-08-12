@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,124 +12,213 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
 </head>
+
 <body background="../static/background.jpg">
-<div class="container">
-<nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
 	<div class="container">
-		<!--<a class="navbar-brand" href="#"><img src="../static/logo.png"></a>-->
- 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-		  <ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link text-white" href="#">Home</a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link text-white" href="../static/Akram-resume.pdf">About Me</a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link text-white" href="#">Contact</a>
-				</li>
-				<li class="nav-item ">
-					<div class="dropdown show">
-					  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Projects
-					  </a>
+		<nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
+			<div class="container">
+				<!--<a class="navbar-brand" href="#"><img src="../static/logo.png"></a>-->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link text-white" href="#">Home</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link text-white" href="../static/Akram-resume.pdf">About Me</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link text-white" href="#contact">Contact</a>
+						</li>
+						<li class="nav-item ">
+							<div class="dropdown show">
+								<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Projects
+								</a>
 
-					  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-					    <a class="dropdown-item" href="/index">Project(1)</a>
-					    <a class="dropdown-item" href="/register">Project(2)</a>
-					    <a class="dropdown-item" href="#">Project(3)</a>
-					  </div>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="/index">English Dictionary</a>
+									<a class="dropdown-item" href="/register">Site Monitoring Tool</a>
+									<a class="dropdown-item" href="/quiz">Multiple Choice Quiz</a>
+									<a class="dropdown-item" href="/register">Blog</a>
+								</div>
+							</div>
+						</li>
+
+				</div>
+		</nav>
+
+		<div style="background-color: #e9ecef;">
+			<!--- Jumbotron -->
+			<div class="jumbotron border-bottom">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-sm text-center">
+							<img src="../static/Akram.jpg" alt="..." class="img-thumbnail img-fluid" width="40%">
+						</div>
+						<div class="col-sm">
+							<h1 class="display-4">Akram Abdullah</h1>
+							<p class="lead"> Electrical Engineer Graduate</p>
+							<p class="lead">MEng from University of Toronto</p>
+						</div>
 					</div>
-				</li>
-
-	</div>
-</nav>
-
-<div style="background-color: #e9ecef;">
-<!--- Jumbotron -->
-<div class="jumbotron border-bottom">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-sm text-center">
-				<img src="../static/Akram.jpg" alt="..." class="img-thumbnail img-fluid" width="40%" >
+				</div>
 			</div>
-			<div class="col-sm">
-    		<h1 class="display-4">Akram Abdullah</h1>
-	  		<p class="lead"> Electrical Engineer Graduate</p>
-				<p class="lead">MEng from University of Toronto</p>
+
+			<!--- Skills -->
+
+			<div class="col-12 text-center my-4">
+				<h2>Skills</h2>
 			</div>
+			<div class="container">
+				<div class="row text-center justify-content-center">
+					<div class="col-md-3 p-2 m-2 border">
+						<p class="mb-0">HTML5</p><img src="../static/html.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>CSS3</p><img src="../static/css.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>JavaScript</p><img src="../static/js.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>Python</p><img src="../static/python.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>PostgreSQL</p><img src="../static/postgresql.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>Flask</p><img src="../static/flask.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>Bootstrap 4</p><img src="../static/bootstrap.svg" alt="..." class=" img-fluid" width="50%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>Git</p><img src="../static/git.svg" alt="..." class=" img-fluid" width="50%">
+					</div>
+					<div class="col-md-3 p-2 m-2 border">
+						<p>jQuery</p><img src="../static/jquery.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+				</div>
+			</div>
+
+			<!--- Projects -->
+
+			<div class="col-12 text-center my-4">
+				<h2>Projects</h2>
+			</div>
+
+			<div class="container">
+				<div class="row text-center justify-content-center">
+					<div class="col-md-4 card m-2" style="width: 18rem;">
+						<img class="card-img-top mt-4" src="static/dictionary.jpg" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">English Dictionary</h5>
+							<p class="card-text"><b>Skills:</b> HTML5 - CSS3 - PostgreSQL - Flask</p>
+							<a href="/index" class="btn btn-primary">Go to project</a>
+						</div>
+					</div>
+
+					<div class="col-md-4 card m-2" style="width: 18rem;">
+						<img class="card-img-top mt-4" src="static\Picture1.png" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Site Monitoring Tool</h5>
+							<p class="card-text"><b>Skills:</b> Python - Tkinter</p>
+							<a href="#" class="btn btn-primary">Go to project</a>
+						</div>
+					</div>
+
+					<div class="col-md-4 card m-2" style="width: 18rem;">
+						<img class="card-img-top mt-4" src="static\mcq.jpg" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Multiple Choice Quiz</h5>
+							<p class="card-text"><b>Skills:</b> HTML5 - CSS3 - JavaScript - Flask</p>
+							<a href="/quiz" class="btn btn-primary">Go to project</a>
+						</div>
+					</div>
+					<div class="col-md-4 card m-2" style="width: 18rem;">
+						<img class="card-img-top mt-4" src="static\blog.jpg" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Blog (In development)</h5>
+							<p class="card-text"><b>Skills:</b> HTML5 - CSS3 - PostgreSQL - Flask</p>
+							<a href="/register" class="btn btn-primary">Go to project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--- Education -->
+
+			<div class="col-12 text-center mt-4">
+				<h2>Education</h2>
+			</div>
+
+			<section class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-6 text-center">
+						<h3>
+							King Fahd University of Petroleum and Minerals
+						</h3>
+						<p>Sep. 2011- Jun. 2016</p>
+						<p><b>Bachelor of Science(B.Sc)</b></p>
+						<p>Electrical Engineering</p>
+					</div>
+					<div class="col-6 text-center">
+						<img class="img-fluid" src="/static/uoft.png" alt="" width="200px">
+					</div>
+				</div>
+			</section>
+
+			<section class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-6 text-center">
+						<img class="img-fluid" src="static\kfupm.png" alt="" width="180px">
+					</div>
+					<div class="col-6 text-center">
+						<h3>
+							University of Toronto
+						</h3>
+						<p>Sep. 2016 – Jun. 2018</p>
+						<p><b>Master of Engineering(M.Eng)</b></p>
+						<p>Electrical Engineering</p>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!--- Connect -->
+			<div class="container mt-4" id="contact">
+				<div class="row text-center padding">
+					<div class="col-12">
+						<h4> STAY CONNECTED </h4>
+					</div>
+<div class="col-3"></div>
+<div class="col-1"><i class="fas fa-phone-square fa-3x"></i></div>
+<div class="col-2 my-auto"><p class="my-auto"><b>+1(780)288-9439</b></p></div>
+<div class="col-1"><i class="fas fa-envelope fa-3x"></i></div>
+<div class="col-2 my-auto"><p class="my-auto"><b>Akra200m@gmail.com</b></p></div>
+<div class="col-3"></div>
+
+					<div class="col-12 social padding mb-5 mt-3">
+						<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/"><i class="fab fa-linkedin fa-3x"></i></a>
+						<a href="https://github.com/Akra20m"><i class="fab fa-github fa-3x"></i></a>
+						<a href="#"><i class="fab fa-twitter fa-3x"></i></a>
+						<a href="#"><i class="fab fa-facebook fa-3x"></i></a>
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+			<!--- Footer -->
 		</div>
-	 </div>
-</div>
-
-<!--- Image Slider -->
-<section class="container-fluid">
-	<div class="row align-items-center">
-			<div class="col-6 text-center">
-				<h1>
-					Project(1): Site Monitoring Tool
-				</h1>
-			</div>
-			<div class="col-6">
-				<img class="img-fluid" src="static\background.png" alt="">
-			</div>
-	</div>
-</section>
-
-<section class="container-fluid">
-	<div class="row align-items-center">
-			<div class="col-6 text-center">
-				<img class="img-fluid" src="static\background2.png" alt="">
-			</div>
-			<div class="col-6">
-				<h1 class="text-center">Hi</h1>
-			</div>
-	</div>
-</section>
-
-<section class="container-fluid">
-	<div class="row align-items-center">
-			<div class="col-6 text-center">
-				<h1>
-					Project(3): Site Monitoring Tool
-				</h1>
-
-<p>•	Implemented a tool to periodically monitor an inputted URL for any changes/updates then send text and email notifications to the user upon any recent updates.
-</p>
-<p>•	Added a Graphical User Interface (GUI) to the tool using Tkinter to make it user-friendly.
-</p>
-
-</h1>
-			</div>
-			<div class="col-6 text-center">
-				<img class="img-fluid" src="static\Picture1.png" alt="">
-			</div>
-	</div>
-</section>
-
-<!--- Connect -->
-<div class="container">
-<div class="row text-center padding">
-	<div class="col-12">
-		<h6> STAY CONNECTED </h6>
-	</div>
-	<div class="col-12 social padding">
-		<a href="#"><i class="fab fa-facebook"></i></a>
-		<a href="#"><i class="fab fa-linkedin"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
-		<a href="#"><i class="fab fa-github"></i></a>
 
 	</div>
-</div>
-</div>
-
-
-<!--- Footer -->
-</div>
-
-</div>
 </body>
+
 </html>
