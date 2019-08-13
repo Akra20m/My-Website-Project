@@ -8,9 +8,9 @@ from functools import wraps
 
 app=Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
-app.config['postgres://***REMOVED***'
+app.config['postgres://***REMOVED***?sslmode=require'
 
-db=SQLAlchemy(app)
+# db=SQLAlchemy(app)
 
 class Data(db.Model):
     __tablename__='dictionary'
