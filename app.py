@@ -5,7 +5,9 @@ from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
+#app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
+app.config['postgres://***REMOVED***?sslmode=require'
+
 db=SQLAlchemy(app)
 
 class Data(db.Model):
