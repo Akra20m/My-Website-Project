@@ -3,8 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 #from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
-from functools import wraps
-
 
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
@@ -127,7 +125,7 @@ def quiz():
 
 
 if __name__== "__main__":
-    app.secret_key='****'
+    app.secret_key='***REMOVED***'
     #app.jinja_env.auto_reload = True
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
