@@ -24,7 +24,7 @@ class Data(db.Model):
         self.defination=defination
 
 class Users(db.Model):
-    __tablename__='registration data'
+    __tablename__='registration'
     id=db.Column(db.Integer, primary_key=True)
     name=db.Column(db.Text, unique=False)
     email=db.Column(db.Text, unique=True)
@@ -131,7 +131,7 @@ def quiz():
 if __name__== "__main__":
     app.secret_key='***REMOVED***'
     app.config['SESSION_TYPE'] = 'filesystem'
-    
+
     #app.jinja_env.auto_reload = True
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
