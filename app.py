@@ -9,7 +9,7 @@ from functools import wraps
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
 #app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
-app.secret_key='***REMOVED***'
+
 db=SQLAlchemy(app)
 
 class Data(db.Model):
@@ -129,6 +129,10 @@ def quiz():
 
 
 if __name__== "__main__":
-    #app.secret_key='***REMOVED***'
-    #app.run(host='0.0.0.0', port=9000, debug=True)
-    app.run(debug=True)
+    app.secret_key='***REMOVED***'
+    app.config['SESSION_TYPE'] = 'filesystem'
+
+    #app.jinja_env.auto_reload = True
+    #app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.debug=True
+    app.run()
