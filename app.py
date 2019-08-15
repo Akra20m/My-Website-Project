@@ -130,4 +130,5 @@ def quiz():
 
 if __name__== "__main__":
     #app.secret_key='***REMOVED***'
-    app.run(host='0.0.0.0', port=9000, debug=True)
+    #app.run(host='0.0.0.0', port=9000, debug=True)
+    app.run(debug=True)
