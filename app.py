@@ -24,7 +24,7 @@ class Data(db.Model):
         self.defination=defination
 
 class Users(db.Model):
-    __tablename__='registration'
+    __tablename__='registration data'
     id=db.Column(db.Integer, primary_key=True)
     name=db.Column(db.Text, unique=False)
     email=db.Column(db.Text, unique=True)
