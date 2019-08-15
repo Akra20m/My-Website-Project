@@ -80,7 +80,7 @@ def register():
         db.session.add(users)
         db.session.commit()
         #flash('You are registered', 'success')
-        return redirect(url_for('login'))
+        return redirect(url_for('main'))
     return render_template('registration.html', form=form)
 
 @app.route('/login', methods=['GET','POST'])
