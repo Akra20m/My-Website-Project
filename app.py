@@ -7,8 +7,8 @@ from functools import wraps
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
-#app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
+#app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:*****@localhost/project1'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
 
 db=SQLAlchemy(app)
 
@@ -80,7 +80,7 @@ def register():
         db.session.add(users)
         db.session.commit()
         #flash('You are registered', 'success')
-        return redirect(url_for('main'))
+        return redirect(url_for('login'))
     return render_template('registration.html', form=form)
 
 @app.route('/login', methods=['GET','POST'])
