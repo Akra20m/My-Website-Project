@@ -7,8 +7,8 @@ from functools import wraps
 
 
 app=Flask(__name__)
-#app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:***REMOVED***@localhost/project1'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
+#app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:***REMOVED***@localhost/project1'
 app.secret_key='***REMOVED***'
 
 db=SQLAlchemy(app)
