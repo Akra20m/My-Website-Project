@@ -38,9 +38,6 @@ class Users(db.Model):
         self.username=username
         self.password=password
 
-# @app.route("/index")
-# def index():
-#     return render_template("index.html")
 @app.route("/index", methods=['GET', 'POST'])
 def index():
     if request.method=='POST':
@@ -48,14 +45,12 @@ def index():
         words=request.form["word"].lower().capitalize()
         print(words)
 
-        #
-        #news=Data.query.all()
         news=Data.query.filter_by(word=words).first()
         print(news)
         if news!=None:
             #return render_template("answer.html", mynews=news)
             return render_template("index.html", mynews=news.defination,mynews1=news.word)
-        return render_template("index.html",text="We don't have the meaning for that, try again")
+        return render_template("index.html",text="We don't have the meaning for this word")
     if request.method=='GET':
         return render_template("index.html")
 @app.route("/")
@@ -131,7 +126,5 @@ def quiz():
 if __name__== "__main__":
     #app.secret_key='***REMOVED***'
     app.config['SESSION_TYPE'] = 'filesystem'
-    #app.jinja_env.auto_reload = True
-    #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
     app.run()
