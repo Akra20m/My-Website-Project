@@ -1,14 +1,13 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session, logging
 from flask_sqlalchemy import SQLAlchemy
-#from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from functools import wraps
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
-#app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:***REMOVED***@localhost/project1'
+#app.config['SQLALCHEMY_DATABASE_URI']='postgres://***REMOVED***?sslmode=require'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:***REMOVED***@localhost/project1'
 app.secret_key='***REMOVED***'
 
 db=SQLAlchemy(app)
@@ -16,7 +15,6 @@ db=SQLAlchemy(app)
 class Data(db.Model):
     __tablename__='dictionary'
     id=db.Column(db.Integer, primary_key=True)
-    #id=db.Column(db.Integer)
     word=db.Column(db.Text, unique=False)
     defination=db.Column(db.Text, unique=False)
 
@@ -41,14 +39,12 @@ class Users(db.Model):
 @app.route("/index", methods=['GET', 'POST'])
 def index():
     if request.method=='POST':
-        #words=request.form["word"]
         words=request.form["word"].lower().capitalize()
         print(words)
 
         news=Data.query.filter_by(word=words).first()
         print(news)
         if news!=None:
-            #return render_template("answer.html", mynews=news)
             return render_template("index.html", mynews=news.defination,mynews1=news.word)
         return render_template("index.html",text="We don't have the meaning for this word")
     if request.method=='GET':
