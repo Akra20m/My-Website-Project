@@ -1,14 +1,13 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session, logging
 from flask_sqlalchemy import SQLAlchemy
-#from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from functools import wraps
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://bfdfczbsfcinwo:0d5b3fa1df74d1919e4d6a0954bb4a570fa1d6c955f346991b7fd9f2fad430f5@ec2-75-101-133-29.compute-1.amazonaws.com:5432/ddp0q09isres7h?sslmode=require'
-#app.config['SQLALCHEMY_DATABASE_URI']='****'
+#app.config['SQLALCHEMY_DATABASE_URI']='postgres://bfdfczbsfcinwo:0d5b3fa1df74d1919e4d6a0954bb4a570fa1d6c955f346991b7fd9f2fad430f5@ec2-75-101-133-29.compute-1.amazonaws.com:5432/ddp0q09isres7h?sslmode=require'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:202601@localhost/project1'
 app.secret_key='akram123'
 
 db=SQLAlchemy(app)
@@ -38,22 +37,14 @@ class Users(db.Model):
         self.username=username
         self.password=password
 
-# @app.route("/index")
-# def index():
-#     return render_template("index.html")
 @app.route("/index", methods=['GET', 'POST'])
 def index():
     if request.method=='POST':
-        #words=request.form["word"]
         words=request.form["word"].lower().capitalize()
         print(words)
-
-        #
-        #news=Data.query.all()
         news=Data.query.filter_by(word=words).first()
         print(news)
         if news!=None:
-            #return render_template("answer.html", mynews=news)
             return render_template("index.html", mynews=news.defination,mynews1=news.word)
         return render_template("index.html",text="We don't have the meaning for that, try again")
     if request.method=='GET':
@@ -80,7 +71,6 @@ def register():
         users=Users(name,email,username,password)
         db.session.add(users)
         db.session.commit()
-        #flash('You are registered', 'success')
         return redirect(url_for('login'))
     return render_template('registration.html', form=form)
 
@@ -132,7 +122,5 @@ def quiz():
 if __name__== "__main__":
     #app.secret_key='akram123'
     app.config['SESSION_TYPE'] = 'filesystem'
-    #app.jinja_env.auto_reload = True
-    #app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.debug=True
     app.run()
