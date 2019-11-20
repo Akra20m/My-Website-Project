@@ -6,35 +6,233 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Akram’s Portfolio Website</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="../static/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" href="../static/index.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 </head>
 
 <body>
+		<!--- Navbar -->
 
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-4">English Dictionary</h1>
-			<p class="lead"> Find the meaning of English words </p>
-		</div>
-	</div>
-	<div class="container">
-		<div>
-			{{text | safe}}
-		</div>
-		<form action="{{url_for("index")}}" method="POST">
-			<input type="text" name="word" placeholder="Try Akram, Toronto" required>
-			<button type="submit">Submit</button>
-		</form>
-		<div class="border w-100 p-3" style="margin-top:10px;height: 200px">
-			<div style="color:blue;margin-left:10px;margin-top:5px;font-weight: 900">{{mynews1}}</div>
-			<div style="color:blue;margin-left:10px;margin-top:5px;font-weight: 600">{{mynews}}</div>
+		<nav class="navbar navbar-expand-md navbar-light bg-primary">
+			<div class="container">
+				<!--<a class="navbar-brand" href="#"><img src="../static/logo.png"></a>-->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item ">
+							<a class="nav-link text-white" href="../static/Akram-resume.pdf" target="_blank">About Me</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link text-white" href="#contact">Contact</a>
+						</li>
+						<li class="nav-item ">
+							<div class="dropdown show">
+								<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Projects
+								</a>
+
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="/main" target="_blank">English Dictionary</a>
+									<a class="dropdown-item" href="https://github.com/Akra20m/Site_Monitoring_Tool" target="_blank">Site Monitoring Tool</a>
+									<a class="dropdown-item" href="/quiz" target="_blank">Multiple Choice Quiz</a>
+									<a class="dropdown-item" href="/register" target="_blank">Blog</a>
+								</div>
+							</div>
+						</li>
+
+				</div>
+		</nav>
+
+		<div style="background-color:white">
+			<!--- Jumbotron -->
+			<div class="jumbotron d-flex align-items-center container-custom one ">
+				<div class="container">
+					<div class="row align-items-center mr-5">
+						<div class="col-sm text-center">
+							<img data-aos="fade-right" data-aos-duration="2000" src="../static/Akram.jpg" alt="..." class="img-thumbnail rounded-circle" width="50%">
+						</div>
+						<div data-aos="fade-left" data-aos-duration="2000" class="col-sm">
+							<h1 class="border-top border-bottom text-center"><b>AKRAM ABDULLAH</b></h1>
+							<p class="lead mb-1">Toronto, Ontario, Canada</p>
+							<p class="lead"> A passionate full stack developer with solid self-taught skills and a background in electrical engineering. Have developed multiple web and desktop applications using python. Seeking a challenging position with potential for personal growth. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--- Projects -->
+			<div class="col-12 text-center my-5">
+				<h2>Projects</h2>
+			</div>
+
+			<div class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-5 text-left project-description">
+						<h2 class="project-title">JavaScript Game</h2>
+						<p>The game was developed using HTML, CSS, and Vanilla JS.</p>
+						<div class="text-center">
+						<p> HTML | CSS | Vanill JS</p>
+						<button type="button" class="btn btn-dark">LIVE</button>
+						<button type="button" class="btn btn-dark">GITHUB</button>
+						</div>
+					</div>
+					<div class="col-1"></div>
+					<div class="col-6"><img data-aos="flip-left" src="static/game.png" class="img-fluid" alt="JavaScript-Game">
+					</div>
+				</div>
+
+			</div>
+
+			<div class="container container-custom-project">
+					<div class="row text-center align-items-stretch">
+						<div class="col-6"><img data-aos="flip-right" src="static/game.png" class="img-fluid" alt="JavaScript-Game"></div>
+						<div class="col-1"></div>
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">JavaScript Game</h2>
+							<p>The game was developed using HTML, CSS, and Vanilla JS.</p>
+							<div class="text-center">
+							<p> HTML | CSS | Vanill JS</p>
+							<button type="button" class="btn btn-dark">LIVE</button>
+							<button type="button" class="btn btn-dark">GITHUB</button>
+							</div>
+						</div>
+					</div>
+	
+			</div>
+
+			<div class="container container-custom-project">
+					<div class="row text-center align-items-stretch">
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">JavaScript Game</h2>
+							<p>The game was developed using HTML, CSS, and Vanilla JS.</p>
+							<div class="text-center">
+							<p> HTML | CSS | Vanill JS</p>
+							<button type="button" class="btn btn-dark">LIVE</button>
+							<button type="button" class="btn btn-dark">GITHUB</button>
+							</div>
+						</div>
+						<div class="col-1"></div>
+						<div class="col-6"><img src="static/game.png" class="img-fluid" alt="JavaScript-Game">
+						</div>
+					</div>
+	
+			</div>
+			<div class="container container-custom-project">
+					<div class="row text-center align-items-stretch">
+						<div class="col-6"><img src="static/monitor.png" class="img-fluid" alt="JavaScript-Game"></div>
+						<div class="col-1"></div>
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">Website Monitoring Tool</h2>
+							<ul>
+								<li>Implemented a tool to periodically monitor an inputted URL for any changes/updates then send text and email notifications to the user upon any recent updates.</li>
+								<li>Added a Graphical User Interface (GUI) to the tool using Tkinter to make it user-friendly.</li>
+							</ul>
+							<div class="text-center">
+							<p> Python | Tkinter </p>
+							<button type="button" class="btn btn-dark">LIVE</button>
+							<button type="button" class="btn btn-dark">GITHUB</button>
+							</div>
+						</div>
+					</div>
+	
+			</div>
+
+				
+			
+			<!--- Skills -->
+			<div class="container-custom-project">
+			<div class="col-12 text-center">
+				<h2>Skills</h2>
+			</div>
+			<div class="container d-flex align-items-center">
+				<div class="row text-center justify-content-center">
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="mb-0 lead">HTML5</p><img src="../static/html.svg" alt="..." class=" img-fluid mt-1" width="50%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">CSS3</p><img src="../static/css.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">JavaScript</p><img src="../static/js.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">Python</p><img src="../static/python.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">PostgreSQL</p><img src="../static/postgresql.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">Flask</p><img src="../static/flask.svg" alt="..." class=" img-fluid" width="45%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead mb-2">Bootstrap 4</p><img src="../static/bootstrap.svg" alt="..." class=" img-fluid" width="55%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead mb-1">Git</p><img src="../static/git.svg" alt="..." class=" img-fluid" width="60%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">jQuery</p><img src="../static/jquery.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+					<div class="col-md-2 p-2 m-2 border">
+						<p class="lead">Photoshop</p><img src="../static/photoshop.svg" alt="..." class=" img-fluid" width="40%">
+					</div>
+				</div>
+			</div>
 		</div>
 
+			
+			
+			<!--- Connect -->
+			<div class="container mt-4 border-top" id="contact">
+				<div class="row text-center padding">
+					<div class="col-12">
+						<h5 class="lead"> CONTACT ME </h5>
+					</div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-1"><i class="fas fa-phone-square fa-3x"></i></div>
+					<div class="col-sm-2 my-auto">
+						<p class="my-auto"><b>+1(780)288-9439</b></p>
+					</div>
+					<div class="col-sm-1"><i class="fas fa-envelope fa-3x"></i></div>
+					<div class="col-sm-2 my-auto">
+						<p class="my-auto"><b>Akra200m@gmail.com</b></p>
+					</div>
+					<div class="col-sm-3"></div>
+
+					<div class="col-12 social padding mb-5 mt-1">
+						<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank"><i class="fab fa-linkedin fa-3x mx-1"></i></a>
+						<a href="https://github.com/Akra20m" target="_blank"><i class="fab fa-github fa-3x mx-1"></i></a>
+						<a href="#" target="_blank"><i class="fab fa-twitter fa-3x mx-1"></i></a>
+						<a href="#" target="_blank"><i class="fab fa-facebook fa-3x mx-1"></i></a>
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+			<!--- Footer -->
+			<div class="container mt-0 mb-2 text-center">
+				<p style="font-size:18px">© Akram Abdullah</p>
+			</div>
+
 	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 
 </body>
 
