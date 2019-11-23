@@ -6,35 +6,222 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Akram’s Portfolio Website</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="../static/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="../static/images/favicon.ico" />
+	<link rel="stylesheet" href="../static/css/index.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Calistoga|Righteous|Roboto+Condensed&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+		
 
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-4">English Dictionary</h1>
-			<p class="lead"> Find the meaning of English words </p>
-		</div>
-	</div>
-	<div class="container">
 		<div>
-			{{text | safe}}
+			<div class="one">
+				<!--- Navbar -->
+
+		<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="/"><img src="../static/images/logo.png" style="width: 50%;"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item ">
+								<a class="nav-link text-white" href="#projects"><p>Projects</p></a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link text-white" href="#contact"><p>Contact</p></a>
+							</li>
+							<li class="nav-item ">
+								<a href="../static/Akram-resume.pdf" target="_blank"><button type="button" class="btn btn-dark"><b>RESUME</b></button></a>
+							</li>
+	
+					</div>
+			</nav>
+			<!--- Jumbotron -->
+			<div class="jumbotron d-flex align-items-center container-custom">
+				<div class="container d-flex align-items-center text-container">
+					<div class="row mr-5">
+						<div class="col-sm text-center">
+							<img data-aos="fade-right" data-aos-duration="2000" src="../static/images/Akram.png" alt="..." class="img-fluid rounded-circle">
+						</div>
+						<div data-aos="fade-left" data-aos-duration="2000" class="col-sm" >
+							<h1 class="border-top border-bottom text-center my-3"><b>AKRAM ABDULLAH</b></h1>
+							<p class="mb-1">Toronto, Ontario, Canada</p>
+							<p> A passionate <b>full stack developer</b> with solid self-taught skills and a background in electrical engineering. Have developed multiple web and desktop applications. Seeking a challenging position with potential for personal growth.</p>
+							<div class="col-12 social padding mb-5 mt-1 d-flex justify-content-center">
+								<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank"><i class="fab fa-linkedin fa-3x mx-2"></i></a>
+								<a href="https://github.com/Akra20m" target="_blank"><i class="fab fa-github fa-3x mx-2"></i></a>
+								<a href="#" target="_blank"><i class="fab fa-twitter fa-3x mx-2"></i></a>
+								<a href="#" target="_blank"><i class="fab fa-facebook fa-3x mx-2"></i></a>
+							</div>
+		
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<!--- Projects -->
+			<div class="col-12 text-center mt-4" id="projects">
+				<p class="section-title">PROJECTS</p>
+			</div>
+			<div class="container container-custom-project">
+				<div data-aos="zoom-in-up" data-aos-duration="2000" class="row text-center align-items-stretch">
+					<div class="col-6 text-left project-description">
+						<h2 class="project-title">SPACE WAR</h2>
+						<p>The game was developed using HTML, CSS, and Vanilla JS. Object Oriented Programming concepts helped to oraganize the code and avoid a messy structure. I have also utilized some designing pattern such as Factory pattern to instantiate all the classes needed. </p>
+						<div class="text-center">
+						<p> HTML | CSS | Vanill JS | OOP </p>
+						<a href="https://akra20m.github.io/JavaScript-Game" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
+						<a href="https://github.com/Akra20m/JavaScript-Game" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+					<div class="col-6"><img src="static/images/game.png" class="img-fluid" alt="JavaScript-Game">
+					</div>
+				</div>
+
+			</div>
+			<hr data-aos="zoom-in" data-aos-duration="2000" class="border-design">
+			<div class="container container-custom-project">
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="row text-center align-items-stretch">
+						<div class="col-6"><img src="static/images/mcq.png" class="img-fluid" alt="JavaScript-Game"></div>
+						<div class="col-1"></div>
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">MULTIPLE CHOICE QUIZ</h2>
+							<p>The quiz was implemented using HTML, CSS, and Vanilla JS. In this project, I first practised selecting and manipulating DOM elements</p>
+							<div class="text-center">
+							<p> HTML | CSS | Vanilla JS</p>
+							<a href="/quiz" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/My-Website-Project/blob/master/static/panel.js" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
+							</div>
+						</div>
+					</div>
+	
+			</div>
+			<hr data-aos="zoom-in" data-aos-duration="2000" class="border-design">
+			<div class="container container-custom-project">
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="row text-center align-items-stretch">
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">JavaScript Game</h2>
+							<p>The game was developed using HTML, CSS, and Vanilla JS.</p>
+							<div class="text-center">
+							<p> HTML | CSS | Vanilla JS</p>
+							<button type="button" class="btn btn-dark">LIVE</button>
+							<button type="button" class="btn btn-dark">GITHUB</button>
+							</div>
+						</div>
+						<div class="col-1"></div>
+						<div class="col-6"><img src="static/images/game.png" class="img-fluid" alt="JavaScript-Game">
+						</div>
+					</div>
+	
+			</div>
+			<hr data-aos="zoom-in" data-aos-duration="2000" class="border-design">
+			<div class="container container-custom-project">
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="row text-center align-items-stretch">
+						<div class="col-6"><img src="static/images/monitor.png" class="img-fluid" alt="JavaScript-Game"></div>
+						<div class="col-1"></div>
+						<div class="col-5 text-left project-description">
+							<h2 class="project-title">WEBSITE MONITORING TOOL</h2>
+							<ul>
+								<li><p>Implemented a tool to periodically monitor an inputted URL for any changes/updates then send text and email notifications to the user upon any recent updates.</p></li>
+								<li><p>Added a Graphical User Interface (GUI) to the tool using Tkinter to make it user-friendly.</p></li>
+							</ul>
+							<div class="text-center">
+							<p> Python | Tkinter </p>
+							<a href="#" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/Site_Monitoring_Tool" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
+							</div>
+						</div>
+					</div>
+	
+			</div>
+
+				
+			
+			<!--- Skills -->
+			<div data-aos="zoom-in" data-aos-duration="2000" class="container-custom-project pt-3 two">
+			<div class="col-12 text-center mt-4">
+				<h2 class="section-title">SKILLS</h2>
+			</div>
+			<div class="container d-flex mt-4">
+				<div class="row text-center justify-content-center align-items-center">
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">HTML5</p><img src="../static/images/html.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">CSS3</p><img src="../static/images/css.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">JavaScript</p><img src="../static/images/js.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Python</p><img src="../static/images/python.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">PostgreSQL</p><img src="../static/images/postgresql.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">SQL</p><img src="../static/images/sql.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Flask</p><img src="../static/images/flask.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Bootstrap</p><img src="../static/images/bootstrap.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Git</p><img src="../static/images/git.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">React</p><img src="../static/images/react.png" alt="..." class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">API</p><img src="../static/images/api.png" alt="..." class=" img-fluid">
+					</div>
+				</div>
+			</div>
 		</div>
-		<form action="{{url_for("index")}}" method="POST">
-			<input type="text" name="word" placeholder="Try Akram, Toronto" required>
-			<button type="submit">Submit</button>
-		</form>
-		<div class="border w-100 p-3" style="margin-top:10px;height: 200px">
-			<div style="color:blue;margin-left:10px;margin-top:5px;font-weight: 900">{{mynews1}}</div>
-			<div style="color:blue;margin-left:10px;margin-top:5px;font-weight: 600">{{mynews}}</div>
-		</div>
+					
+			<!--- Connect -->
+			<div class="container mt-4 p-4 border-top container-custom-project" id="contact">
+				<div class="row text-center padding">
+					<div class="col-12">
+						<h5> CONTACT ME </h5>
+					</div>
+					<div class="col-sm-3"></div>
+					<div class="col-sm-1"><i class="fas fa-phone-square fa-3x"></i></div>
+					<div class="col-sm-2 my-auto">
+						<p class="my-auto"><b>+1(780)288-9439</b></p>
+					</div>
+					<div class="col-sm-1"><i class="fas fa-envelope fa-3x"></i></div>
+					<div class="col-sm-2 my-auto">
+						<p class="my-auto"><b>Akra200m@gmail.com</b></p>
+					</div>
+					<div class="col-sm-3"></div>
+
+				</div>
+			</div>
+
+
+			<!--- Footer -->
+			<div class="container mt-0 mb-2 text-center">
+				<p style="font-size:18px">© Akram Abdullah</p>
+			</div>
 
 	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> 
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 
 </body>
 
