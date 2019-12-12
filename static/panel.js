@@ -59,7 +59,7 @@ function nextQuestion () {
     next.style.display='none';
     score.style.display='';
     tryAgain.style.display='';
-    score.textContent='Your Score is ' + scoreCount;
+    score.innerHTML='Your Score <br>' + scoreCount;
     return;
 
   }
