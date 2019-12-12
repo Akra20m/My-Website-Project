@@ -1,8 +1,4 @@
 body {
-    /*background-image: linear-gradient(to right bottom, gray, white);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
     height: 100%;
     
 }
@@ -76,4 +72,8 @@ button {
     margin: 1rem 35% 4rem 35%;
     background: linear-gradient(90deg, #52a4c9, #d7b970 47%,#52a4c9);
     border-radius: 10px;
+}
+
+.imgc {
+    margin: 5px;
 }
