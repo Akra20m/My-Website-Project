@@ -59,6 +59,8 @@ button {
 .project-title {
     border-bottom: 2px solid black;
     width: 90%;
+    font-weight: bold;
+    font-size: 1.6em;
 }
 
 .img-size {
