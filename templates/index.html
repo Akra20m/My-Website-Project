@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,245 +12,252 @@
 
 </head>
 
-<body>
-
-	<article class="one">
+<body class="one">
+	<header>
 		<!--- Navbar -->
-		<nav class="navbar navbar-expand-md navbar-light">
+		<nav class="navbar navbar-expand-md nav-custom navbar-light">
 			<div class="container">
-				<a class="navbar-brand" href="/"><img src="../static/images/logo.png" style="width: 50%;"></a>
+				<a class="navbar-brand" href="/"><img src="../static/images/logo.png" alt="A website logo" style="width: 50%;"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
+					<ul class="navbar-nav ml-auto align-items-center">
 						<li class="nav-item ">
-							<a class="nav-link text-white" href="#projects">
-								<p>Projects</p>
+							<a class="nav-link text-dark" href="#projects" aria-label="view projects section">
+								<p class="m-0"><b>Projects</b></p>
 							</a>
 						</li>
 						<li class="nav-item ">
-							<a class="nav-link text-white" href="#contact">
-								<p>Contact</p>
+							<a class="nav-link text-dark" href="#contact" aria-label="view contact section">
+								<p class="m-0"><b>Contact</b></p>
 							</a>
 						</li>
 						<li class="nav-item ">
-							<a href="../static/Akram-resume.pdf" target="_blank"><button type="button" class="btn btn-dark"><b>RESUME</b></button></a>
+							<a href="../static/Akram-resume.pdf" class="btn btn-dark" target="_blank" aria-label="view my resume in a seprate page"><b>RESUME</b></a>
 						</li>
-
+		
 				</div>
-		</nav>
-		<!--- Jumbotron -->
-		<section class="jumbotron d-flex align-items-center container-custom">
-			<div class="container d-flex text-container">
-				<div class="row mr-5 align-items-center">
-					<div class="col-md text-center">
-						<img src="../static/images/akram.jpg" alt="..." class="img-fluid rounded-circle">
-					</div>
-					<div class="col-sm">
-						<h1 class="border-top border-bottom text-center my-3"><b>AKRAM ABDULLAH</b></h1>
-						<p class="mb-1">Toronto, Ontario, Canada</p>
-						<p>A passionate <b>full-stack developer</b> with solid self-taught software development skills, and an interest in the ever-changing, and growing technologies.<b> Actively looking for a challenging position with potential for continuous
-								growth.</b><br>
-							Coming from an Engineering background, I enjoy being challenged to solve complex problems and to think outside the box.<br>
-							For the past year, I set off on my journey in the digital world and software development.
-							Motivated by my eager to grow and expand my knowledge, I polished my skills through online courses and certifications. I developed and implemented various web applications, using a wide range of web technologies.</p>
-						<div class="col-12 social padding mb-5 mt-1 d-flex justify-content-center">
-							<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank"><i class="fab fa-linkedin fa-3x mx-2"></i></a>
-							<a href="https://github.com/Akra20m" target="_blank"><i class="fab fa-github fa-3x mx-2"></i></a>
-							<a href="#" target="_blank"><i class="fab fa-twitter fa-3x mx-2"></i></a>
-							<a href="#" target="_blank"><i class="fab fa-facebook fa-3x mx-2"></i></a>
+			</div>
+		</nav>		
+	</header>
+	<main>
+			<!--- Jumbotron -->
+			<article class="jumbotron d-flex align-items-center container-custom">
+				<div class="container align-items-center container-main">
+					<div class="row align-items-center">
+						<div class="col-md">
+							<img src="../static/images/akram.jpg" alt="personal picture of the website developer Akram Abdullah" class="img-fluid rounded-circle">
 						</div>
-
+						<div class="col-md">
+							<h1 class="border-top border-bottom text-center my-3"><b>AKRAM ABDULLAH</b></h1>
+							<p class="mb-1">Toronto, Ontario, Canada</p>
+							<p>A passionate <b>full-stack developer</b> with solid self-taught software development skills, and an interest in the
+								ever-changing, and growing technologies.<b> Actively looking for a challenging position with potential for
+									continuous
+									growth.</b><br>
+								Coming from an Engineering background, I enjoy being challenged to solve complex problems and to think outside the
+								box.<br>
+								For the past year, I set off on my journey in the digital world and software development.
+								Motivated by my eager to grow and expand my knowledge, I polished my skills through online courses and
+								certifications. I developed and implemented various web applications, using a wide range of web technologies.
+							</p>
+							<div class="col-12 social padding mb-5 mt-1 d-flex justify-content-center">
+								<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank" aria-label="go to my linkedin page"><i class="fab fa-linkedin fa-3x mx-2"></i></a>
+								<a href="https://github.com/Akra20m" target="_blank" aria-label="go to my github page"><i class="fab fa-github fa-3x mx-2"></i></a>
+								<a href="#" target="_blank" aria-label="go to my twitter page"><i class="fab fa-twitter fa-3x mx-2"></i></a>
+								<a href="#" target="_blank" aria-label="go to my facebook page"><i class="fab fa-facebook fa-3x mx-2"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+		</article>
+		<div class="bg-white">
+		<!--- Projects -->
+		<article>
+			<div class="col-12 text-center pt-4" id="projects">
+				<h2 class="section-title">PROJECTS</h2>
+			</div>
+			<section class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-md-6"><img src="static/images/sns.png" class="img-fluid" alt="screenshot of the main page of social network website project"></div>
+					<div class="col-md-6 text-left project-description">
+						<p class="project-title">SOCIAL NETWORK SITE</p>
+						<p> This is a social network site where users can register, login, submit posts and interact with other users. The backend is a RESTful API built with Flask and PostgreSQL. The frontend is implemented with React.</p>
+						<div class="text-center">
+							<p> HTML | CSS | Flask | PostgreSQL | React | RESTful API </p>
+							<a href="https://social-network-akram.herokuapp.com" target="_blank" aria-label="view project live"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/Social-Media-Network" target="_blank" aria-label="view code on github"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="border-design">
+			<section class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-md-6 order-md-1 order-2 text-left project-description">
+						<p class="project-title">SPACE WAR GAME</p>
+						<p>Control a ship to defend against enemies and try to score as high as possible in this fun game.</p>
+						<div class="text-center">
+							<p> HTML | CSS | Vanilla JS | OOP | Design Patterns </p>
+							<a href="https://akra20m.github.io/JavaScript-Game" target="_blank" aria-label="view project live"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/JavaScript-Game" target="_blank" aria-label="view code on github"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+					<div class="col-md-6 order-md-2 order-1"><img src="static/images/game.png" class="img-fluid" alt="JavaScript-Game">
+					</div>
+				</div>
+			</section>
+			<hr class="border-design">
+			<section class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-md-6"><img src="static/images/mcq.png" class="img-fluid" alt="screenshot of the javaScript game"></div>
+					<div class="col-md-6 text-left project-description">
+						<p class="project-title">MULTIPLE CHOICE QUIZ</p>
+						<p>Test your knowledge in programming with this multiple choice questions quiz.</p>
+						<div class="text-center">
+							<p> HTML | CSS | Vanilla JS</p>
+							<a href="/quiz" target="_blank" aria-label="view project live"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/My-Website-Project/blob/master/static/panel.js" target="_blank" aria-label="view code on github"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="border-design">
+			<section class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-md-6 order-md-1 order-2 text-left project-description">
+						<p class="project-title">Mini Project: English Dictionary</p>
+						<p>This project was part of my learning process working with Flask and PostgreSQL.<br> Dictionary definitions are protected by copyright. I added some definitions for this project to show it's functional.</p>
+						<div class="text-center">
+							<p> HTML | Bootstrap | Flask | PostgreSQL | Database</p>
+							<a href="/main" target="_blank" aria-label="view project live"><button type="button" class="btn btn-dark">LIVE</button></a>
+							<a href="https://github.com/Akra20m/My-Website-Project/blob/master/templates/main.html" target="_blank" aria-label="view code on github"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+					<div class="col-md-6 order-md-2 order-1"><img src="static/images/ed.png" class="img-fluid" alt="screenshot of the main page of english dictionary project">
+					</div>
+				</div>
+			</section>
+			<hr class="border-design">
+			<section class="container container-custom-project">
+				<div class="row text-center align-items-stretch">
+					<div class="col-md-6"><img src="static/images/monitor.png" class="img-fluid" alt="screenshot of the website monitoring tool app"></div>
+					<div class="col-md-6 text-left project-description">
+						<p class="project-title">WEBSITE MONITORING TOOL</p>
+						<p>Implemented a tool to periodically monitor an inputted URL for any changes/updates then send text and email notifications to the user upon any recent updates.I added a Graphical User Interface (GUI) to the tool using Tkinter to make it
+							user-friendly.</p>
+						<div class="text-center">
+							<p> Python | Tkinter </p>
+							<a href="#" target="_blank"><button type="button" class="btn btn-dark" disabled>LIVE</button></a>
+							<a href="https://github.com/Akra20m/Site_Monitoring_Tool" target="_blank" aria-label="view code on github"><button type="button" class="btn btn-dark">GITHUB</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+		<!--- Skills -->
+		<article class="container-custom-project pt-3 skills-bg">
+			<div class="col-12 text-center mt-4">
+				<h2 class="section-title">SKILLS</h2>
+			</div>
+			<div class="container d-flex mt-4">
+				<div class="row text-center justify-content-center align-items-center">
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">HTML5</p><img src="../static/images/html.png" alt="html logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">CSS3</p><img src="../static/images/css.png" alt="css logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">JavaScript</p><img src="../static/images/js.png" alt="javaScript logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Python</p><img src="../static/images/python.png" alt="python logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">PostgreSQL</p><img src="../static/images/postgresql.png" alt="postgresql logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">SQL</p><img src="../static/images/sql.png" alt="sql logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Flask</p><img src="../static/images/flask.png" alt="flask logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Bootstrap</p><img src="../static/images/bootstrap.png" alt="bootstrap logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">Git</p><img src="../static/images/git.png" alt="git logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">React</p><img src="../static/images/react.png" alt="react logo" class=" img-fluid">
+					</div>
+					<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
+						<p class="m-1">API</p><img src="../static/images/api.png" alt="api logo" class=" img-fluid">
 					</div>
 				</div>
 			</div>
-	</article>
+		</article>
 
-	<!--- Projects -->
-	<article>
-		<div class="col-12 text-center mt-4" id="projects">
-			<h2 class="section-title">PROJECTS</h2>
+		<!--- Certificates -->
+		<article class="container container-custom-project pt-3">
+			<div class="text-center mt-4">
+				<h2 class="section-title">Certifications & Courses</h2>
+			</div>
+
+			<div class="row">
+				<a href="../static/images/aandd.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/aandd.jpg" class="img-fluid rounded imgc" alt="certificate of completion for algorithms and data structures course">
+				</a>
+				<a href="../static/images/randr.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/randr.jpg" class="img-fluid rounded imgc" alt="certificate of completion for react with redux course">
+				</a>
+				<a href="../static/images/fsd.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/fsd.jpg" class="img-fluid rounded imgc" alt="certificate of completion for full stack developer udacity course">
+				</a>
+				<a href="../static/images/fsf.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/fsf.jpg" class="img-fluid rounded imgc" alt="certificate of completion for full stack web developement with flask course">
+				</a>
+				<a href="../static/images/oop.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/oop.png" class="img-fluid rounded imgc" alt="certificate of completion for programming foundation: object oriented design course">
+				</a>
+				<a href="../static/images/raf.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/raf.jpg" class="img-fluid rounded imgc" alt="certificate of completion for building RESTful api with flask course">
+				</a>
+				<a href="../static/images/dp.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/dp.jpg" class="img-fluid rounded imgc" alt="certificate of completion for design patterns couese">
+				</a>
+				<a href="../static/images/htmlsss.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
+					<img src="../static/images/htmlsss.JPG" class="img-fluid rounded imgc" alt="certificate of completion for html structure, syntax and semantics course">
+				</a>
+			</div>
+
+		</article>
+
+		<!--- Connect -->
+		<article class="container mt-4 p-4 border-top" id="contact">
+			<div class="row text-center">
+				<div class="col-12">
+					<h3> CONTACT ME </h3>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-1"><i class="fas fa-phone-square fa-3x"></i></div>
+				<div class="col-md-3 my-auto">
+					<p class="my-auto">+1(780)288-9439</p>
+				</div>
+				<div class="col-md-1"><i class="fas fa-envelope fa-3x"></i></div>
+				<div class="col-md-3 my-auto">
+					<p class="my-auto">Akra200m@gmail.com</p>
+				</div>
+				<div class="col-md-2"></div>
+
+			</div>
+		</article>
 		</div>
-		<section class="container container-custom-project">
-			<div class="row text-center align-items-stretch">
-				<div class="col-md-6"><img src="static/images/sns.png" class="img-fluid" alt="JavaScript-Game"></div>
-				<div class="col-md-6 text-left project-description">
-					<p class="project-title">SOCIAL NETWORK SITE</p>
-					<p> This is a social network site where users can register, login, submit posts and interact with other users. The backend is a RESTful API built with Flask and PostgreSQL. The frontend is implemented with React.</p>
-					<div class="text-center">
-						<p> HTML | CSS | Flask | PostgreSQL | React | RESTful API </p>
-						<a href="https://social-network-akram.herokuapp.com" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
-						<a href="https://github.com/Akra20m/Social-Media-Network" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<hr class="border-design">
-		<section class="container container-custom-project">
-			<div class="row text-center align-items-stretch">
-				<div class="col-md-6 order-md-1 order-2 text-left project-description">
-					<p class="project-title">SPACE WAR GAME</p>
-					<p>Control a ship to defend against enemies and try to score as high as possible in this fun game.</p>
-					<div class="text-center">
-						<p> HTML | CSS | Vanilla JS | OOP | Design Patterns </p>
-						<a href="https://akra20m.github.io/JavaScript-Game" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
-						<a href="https://github.com/Akra20m/JavaScript-Game" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
-					</div>
-				</div>
-				<div class="col-md-6 order-md-2 order-1"><img src="static/images/game.png" class="img-fluid" alt="JavaScript-Game">
-				</div>
-			</div>
-		</section>
-		<hr class="border-design">
-		<section class="container container-custom-project">
-			<div class="row text-center align-items-stretch">
-				<div class="col-md-6"><img src="static/images/mcq.png" class="img-fluid" alt="JavaScript-Game"></div>
-				<div class="col-md-6 text-left project-description">
-					<p class="project-title">MULTIPLE CHOICE QUIZ</p>
-					<p>Test your knowledge in programming with this multiple choice questions quiz.</p>
-					<div class="text-center">
-						<p> HTML | CSS | Vanilla JS</p>
-						<a href="/quiz" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
-						<a href="https://github.com/Akra20m/My-Website-Project/blob/master/static/panel.js" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<hr class="border-design">
-		<section class="container container-custom-project">
-			<div class="row text-center align-items-stretch">
-				<div class="col-md-6 order-md-1 order-2 text-left project-description">
-					<p class="project-title">Mini Project: English Dictionary</p>
-					<p>This project was part of my learning process working with Flask and PostgreSQL.<br> Dictionary definitions are protected by copyright. I added some definitions for this project to show it's functional.</p>
-					<div class="text-center">
-						<p> HTML | Bootstrap | Flask | PostgreSQL | Database</p>
-						<a href="/main" target="_blank"><button type="button" class="btn btn-dark">LIVE</button></a>
-						<a href="https://github.com/Akra20m/My-Website-Project/blob/master/templates/main.html" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
-					</div>
-				</div>
-				<div class="col-md-6 order-md-2 order-1"><img src="static/images/ed.png" class="img-fluid" alt="JavaScript-Game">
-				</div>
-			</div>
-		</section>
-		<hr class="border-design">
-		<section class="container container-custom-project">
-			<div class="row text-center align-items-stretch">
-				<div class="col-md-6"><img src="static/images/monitor.png" class="img-fluid" alt="JavaScript-Game"></div>
-				<div class="col-md-6 text-left project-description">
-					<p class="project-title">WEBSITE MONITORING TOOL</p>
-					<p>Implemented a tool to periodically monitor an inputted URL for any changes/updates then send text and email notifications to the user upon any recent updates.I added a Graphical User Interface (GUI) to the tool using Tkinter to make it
-						user-friendly.</p>
-					<div class="text-center">
-						<p> Python | Tkinter </p>
-						<a href="#" target="_blank"><button type="button" class="btn btn-dark" disabled>LIVE</button></a>
-						<a href="https://github.com/Akra20m/Site_Monitoring_Tool" target="_blank"><button type="button" class="btn btn-dark">GITHUB</button></a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</article>
-	<!--- Skills -->
-	<article class="container-custom-project pt-3 two">
-		<div class="col-12 text-center mt-4">
-			<h2 class="section-title">SKILLS</h2>
-		</div>
-		<div class="container d-flex mt-4">
-			<div class="row text-center justify-content-center align-items-center">
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">HTML5</p><img src="../static/images/html.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">CSS3</p><img src="../static/images/css.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">JavaScript</p><img src="../static/images/js.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">Python</p><img src="../static/images/python.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">PostgreSQL</p><img src="../static/images/postgresql.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">SQL</p><img src="../static/images/sql.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">Flask</p><img src="../static/images/flask.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">Bootstrap</p><img src="../static/images/bootstrap.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">Git</p><img src="../static/images/git.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">React</p><img src="../static/images/react.png" alt="..." class=" img-fluid">
-				</div>
-				<div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 my-2">
-					<p class="m-1">API</p><img src="../static/images/api.png" alt="..." class=" img-fluid">
-				</div>
-			</div>
-		</div>
-	</article>
-
-	<!--- Certificates -->
-	<article class="container container-custom-project pt-3">
-		<div class="text-center mt-4">
-			<h2 class="section-title">Certifications & Courses</h2>
-		</div>
-
-		<div class="row">
-			<a href="../static/images/aandd.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/aandd.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/randr.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/randr.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/fsd.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/fsd.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/fsf.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/fsf.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/oop.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/oop.png" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/raf.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/raf.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/dp.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/dp.jpg" class="img-fluid rounded imgc">
-			</a>
-			<a href="../static/images/htmlsss.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-3 col-sm-4">
-				<img src="../static/images/htmlsss.JPG" class="img-fluid rounded imgc">
-			</a>
-		</div>
-
-	</article>
-
-	<!--- Connect -->
-	<div class="container mt-4 p-4 border-top" id="contact">
-		<div class="row text-center">
-			<div class="col-12">
-				<h3> CONTACT ME </h3>
-			</div>
-			<div class="col-md-2"></div>
-			<div class="col-md-1"><i class="fas fa-phone-square fa-3x"></i></div>
-			<div class="col-md-3 my-auto">
-				<p class="my-auto">+1(780)288-9439</p>
-			</div>
-			<div class="col-md-1"><i class="fas fa-envelope fa-3x"></i></div>
-			<div class="col-md-3 my-auto">
-				<p class="my-auto">Akra200m@gmail.com</p>
-			</div>
-			<div class="col-md-2"></div>
-
-		</div>
-	</div>
-
+	</main>
 	<!--- Footer -->
-	<footer class="container mt-0 mb-2 text-center">
+	<footer class="pb-3 text-center bg-white">
 		<p style="font-size:18px">© Akram Abdullah</p>
 	</footer>
 
