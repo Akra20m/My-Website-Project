@@ -6,25 +6,34 @@ html {
   margin: 0;
 }
 p {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1.2rem;
 }
-h2 {
-  font-family: "Calistoga", cursive;
+h1,h2 {
+  font-family: 'Saira', sans-serif;
+  margin-bottom: 2rem ;
 }
 .section-title {
-  font-family: "Righteous", cursive;
+  font-family: 'Saira', sans-serif;
   font-size: 2rem;
 }
 
-.nav-custom {
-  /* background-color: #66b8f0; */
+.nav-link-custom {
+  color: white !important;
 }
-.container-main {
-  background-color: rgba(255, 255, 255, 0.8);
+
+.one {
+  /* background: linear-gradient(0deg, #52a4c9, #a9d2e4 35%, white) !important; */
+  /* background-image: url("../images/background.jpg"); */
+  background-image: linear-gradient(rgba(100,100,100,0.5), rgba(100,100,100,0.5)), url("../images/background.jpg");
+  /* background: linear-gradient(145.85deg, #D6B96B -2.65%, rgba(174, 218, 250, 0) 68.76%); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  color: white;
 }
 .container-custom {
-  min-height: 100vh;
+  min-height: 92vh;
   background-color: transparent;
 }
 
@@ -36,12 +45,6 @@ h2 {
 
 button {
   min-width: 30%;
-}
-
-.one {
-  /* background: linear-gradient(0deg, #52a4c9, #a9d2e4 35%, white) !important; */
-  background-image: url("../images/background.jpg");
-  background-size: cover;
 }
 
 .skills-bg {
@@ -82,8 +85,8 @@ button {
   margin: 5px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .one {
     background-size: unset;
   }
-}
+} */

@@ -6,14 +6,15 @@
 	<title>Akram’s Portfolio Website</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="shortcut icon" href="../static/images/favicon.ico" />
-	<link rel="stylesheet" href="../static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
-	<link href="https://fonts.googleapis.com/css?family=Calistoga|Righteous|Roboto+Condensed&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Calistoga|Righteous|Roboto+Condensed&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Saira:400,500&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="one">
-	<header>
+<body>
+	<header class="one">
 		<!--- Navbar -->
 		<nav class="navbar navbar-expand-md nav-custom navbar-light">
 			<div class="container">
@@ -24,62 +25,80 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto align-items-center">
 						<li class="nav-item ">
-							<a class="nav-link text-dark" href="#projects" aria-label="view projects section">
-								<p class="m-0"><b>Projects</b></p>
+							<a class="nav-link nav-link-custom" href="#mystory" aria-label="view my story section">
+								<p class="m-0">Mystory</p>
 							</a>
 						</li>
 						<li class="nav-item ">
-							<a class="nav-link text-dark" href="#contact" aria-label="view contact section">
-								<p class="m-0"><b>Contact</b></p>
+							<a class="nav-link nav-link-custom" href="#projects" aria-label="view projects section">
+								<p class="m-0">Work</p>
 							</a>
 						</li>
 						<li class="nav-item ">
-							<a href="../static/Akram-resume.pdf" class="btn btn-dark" target="_blank" aria-label="view my resume in a seprate page"><b>RESUME</b></a>
+							<a class="nav-link nav-link-custom" href="#contact" aria-label="view contact section">
+								<p class="m-0">Contact</p>
+							</a>
 						</li>
-		
+						<li class="nav-item">
+							<a class="nav-link nav-link-custom" href="../static/Akram-resume.pdf" target="_blank" aria-label="view my resume in a seprate page">
+								<p class="m-0">Resume</p>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</nav>		
+		</nav>
+		<article class="jumbotron d-flex align-items-center container-custom">
+			<div class="container align-items-center text-center">
+				<p>Hello, I am</p>
+				<h1 class="border-top border-bottom">AKRAM ABDULLAH</h1>
+				<h2>A web deverloper</h2>
+				<p>based in Toronto, Canada</p>
+				<button>See works</button>
+				<button>Resume</button>
+				<div class="col-12 social padding mb-5 mt-1 d-flex justify-content-center">
+					<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank" aria-label="go to my linkedin page"><i class="fab fa-linkedin fa-3x mx-2"></i></a>
+					<a href="https://github.com/Akra20m" target="_blank" aria-label="go to my github page"><i class="fab fa-github fa-3x mx-2"></i></a>
+					<a href="#" target="_blank" aria-label="go to my twitter page"><i class="fab fa-twitter fa-3x mx-2"></i></a>
+					<a href="#" target="_blank" aria-label="go to my facebook page"><i class="fab fa-facebook fa-3x mx-2"></i></a>
+				</div>
+			</div>
+		</article>
 	</header>
 	<main>
-			<!--- Jumbotron -->
-			<article class="jumbotron d-flex align-items-center container-custom">
-				<div class="container align-items-center container-main">
-					<div class="row align-items-center">
-						<div class="col-md text-center">
-							<img src="../static/images/akram.jpg" alt="personal picture of the website developer Akram Abdullah" class="img-fluid rounded-circle">
-						</div>
-						<div class="col-md">
-							<h1 class="border-top border-bottom text-center my-3"><b>AKRAM ABDULLAH</b></h1>
-							<p class="mb-1">Toronto, Ontario, Canada</p>
-							<p>A passionate <b>full-stack developer</b> with solid self-taught software development skills, and an interest in the
-								ever-changing, and growing technologies.<b> Actively looking for a challenging position with potential for
-									continuous
-									growth.</b><br>
-								Coming from an Engineering background, I enjoy being challenged to solve complex problems and to think outside the
-								box.<br>
-								For the past year, I set off on my journey in the digital world and software development.
-								Motivated by my eager to grow and expand my knowledge, I polished my skills through online courses and
-								certifications. I developed and implemented various web applications, using a wide range of web technologies.
-							</p>
-							<div class="col-12 social padding mb-5 mt-1 d-flex justify-content-center">
-								<a href="https://www.linkedin.com/in/akram-abdullah-833a4bb4/" target="_blank" aria-label="go to my linkedin page"><i class="fab fa-linkedin fa-3x mx-2"></i></a>
-								<a href="https://github.com/Akra20m" target="_blank" aria-label="go to my github page"><i class="fab fa-github fa-3x mx-2"></i></a>
-								<a href="#" target="_blank" aria-label="go to my twitter page"><i class="fab fa-twitter fa-3x mx-2"></i></a>
-								<a href="#" target="_blank" aria-label="go to my facebook page"><i class="fab fa-facebook fa-3x mx-2"></i></a>
-							</div>
-						</div>
+		
+		<!--- My Stroy -->
+		<article class="container">
+			<div class="text-center pt-4" id="mystory">
+				<h2 class="section-title">MY STORY</h2>
+			</div>
+			<div class="row container-custom-project align-items-stretch">
+					<div class="col-md text-center m-auto">
+						<img src="../static/images/akram.jpg" alt="personal picture of the website developer Akram Abdullah" class="img-fluid rounded-circle align-self-center">
+					</div>
+					<div class="col-md m-auto">
+						<div>
+						<p>A passionate <b>full-stack developer</b> with solid self-taught software development skills, and an interest in the
+							ever-changing, and growing technologies.<b> Actively looking for a challenging position with potential for
+								continuous
+								growth.</b><br>
+							Coming from an Engineering background, I enjoy being challenged to solve complex problems and to think outside the
+							box.<br>
+							For the past year, I set off on my journey in the digital world and software development.
+							Motivated by my eager to grow and expand my knowledge, I polished my skills through online courses and
+							certifications. I developed and implemented various web applications, using a wide range of web technologies.
+						</p>
 					</div>
 				</div>
 		</article>
-		<div class="bg-white">
+
 		<!--- Projects -->
 		<article>
 			<div class="col-12 text-center pt-4" id="projects">
 				<h2 class="section-title">PROJECTS</h2>
 			</div>
-			<section class="container container-custom-project">
-				<div class="row text-center align-items-stretch">
+			<section class="container">
+				<div class="row container-custom-project text-center align-items-center">
 					<div class="col-md-6"><img src="static/images/sns.png" class="img-fluid" alt="screenshot of the main page of social network website project"></div>
 					<div class="col-md-6 text-left project-description">
 						<p class="project-title">SOCIAL NETWORK SITE</p>
@@ -93,8 +112,8 @@
 				</div>
 			</section>
 			<hr class="border-design">
-			<section class="container container-custom-project">
-				<div class="row text-center align-items-stretch">
+			<section class="container">
+				<div class="row container-custom-project text-center align-items-center">
 					<div class="col-md-6 order-md-1 order-2 text-left project-description">
 						<p class="project-title">SPACE WAR GAME</p>
 						<p>Control a ship to defend against enemies and try to score as high as possible in this fun game.</p>
@@ -109,8 +128,8 @@
 				</div>
 			</section>
 			<hr class="border-design">
-			<section class="container container-custom-project">
-				<div class="row text-center align-items-stretch">
+			<section class="container">
+				<div class="row container-custom-project text-center align-items-center">
 					<div class="col-md-6"><img src="static/images/mcq.png" class="img-fluid" alt="screenshot of the javaScript game"></div>
 					<div class="col-md-6 text-left project-description">
 						<p class="project-title">MULTIPLE CHOICE QUIZ</p>
@@ -124,8 +143,8 @@
 				</div>
 			</section>
 			<hr class="border-design">
-			<section class="container container-custom-project">
-				<div class="row text-center align-items-stretch">
+			<section class="container">
+				<div class="row container-custom-project text-center align-items-center">
 					<div class="col-md-6 order-md-1 order-2 text-left project-description">
 						<p class="project-title">Mini Project: English Dictionary</p>
 						<p>This project was part of my learning process working with Flask and PostgreSQL.<br> Dictionary definitions are protected by copyright. I added some definitions for this project to show it's functional.</p>
@@ -140,8 +159,8 @@
 				</div>
 			</section>
 			<hr class="border-design">
-			<section class="container container-custom-project">
-				<div class="row text-center align-items-stretch">
+			<section class="container">
+				<div class="row container-custom-project text-center align-items-center">
 					<div class="col-md-6"><img src="static/images/monitor.png" class="img-fluid" alt="screenshot of the website monitoring tool app"></div>
 					<div class="col-md-6 text-left project-description">
 						<p class="project-title">WEBSITE MONITORING TOOL</p>
@@ -254,7 +273,6 @@
 
 			</div>
 		</article>
-		</div>
 	</main>
 	<!--- Footer -->
 	<footer class="pb-3 text-center bg-white">
