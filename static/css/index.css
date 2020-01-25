@@ -11,7 +11,6 @@ p {
 }
 h1,h2 {
   font-family: 'Saira', sans-serif;
-  margin-bottom: 2rem ;
 }
 .section-title {
   font-family: 'Saira', sans-serif;
@@ -20,6 +19,15 @@ h1,h2 {
 
 .nav-link-custom {
   color: white !important;
+}
+
+.nav-link-custom:hover {
+  color: black !important;
+  background-color: white;
+}
+
+.icon-cog {
+  color: white;
 }
 
 .one {
@@ -47,16 +55,13 @@ button {
   min-width: 30%;
 }
 
-.skills-bg {
-  background: repeating-linear-gradient(
-    184deg,
-    #ffffff,
-    #ffffff 21%,
-    #e8f3f7 10%,
-    #e2eff5 84%
-  );
+.text-container {
+  background-color: #00000024;
 }
 
+.dark-bg {
+  background-color: #ececec8c;
+}
 .project-description {
   background-color: rgba(256, 256, 256, 0.5);
 }
@@ -71,6 +76,16 @@ button {
 .img-size {
   width: 10px;
   height: 10px;
+}
+.skills-container {
+  /* background: repeating-linear-gradient(
+    184deg,
+    #ffffff,
+    #ffffff 21%,
+    #e8f3f7 10%,
+    #e2eff5 84%
+  ); */
+  
 }
 
 .border-design {
