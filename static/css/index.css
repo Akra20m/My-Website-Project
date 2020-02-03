@@ -104,8 +104,10 @@ h1 {
   margin-top: 2%;
 }
 
-button {
+.button-custom {
   min-width: 30%;
+  border-radius: 25px;
+  font-size: 1.1rem;
 }
 
 /* This is the action buttons/links styles in the page */
@@ -178,6 +180,7 @@ button {
 
 .project-description {
   background-color: rgba(256, 256, 256, 0.5);
+  padding-bottom:8px ;
 }
 
 .project-title {
@@ -191,19 +194,28 @@ button {
   width: 10px;
   height: 10px;
 }
-.skills-container {
-}
 
 .border-design {
   border: 0;
-  height: 9px;
+  height: 2px;
   margin: 1rem 35% 4rem 35%;
-  background: linear-gradient(90deg, #52a4c9, #d7b970 47%, #52a4c9);
+  background: linear-gradient(90deg, #ffffff, #000000 , #ffffff);
   border-radius: 10px;
 }
 
 .imgc {
   margin: 5px;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.button-custom-course{
+  display: block;
+  width: 20%;
+  margin: 2px auto;
 }
 
 @media only screen and (max-width: 500px) {
@@ -215,3 +227,4 @@ button {
     display: inline-block;
   }
 }
+
