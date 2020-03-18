@@ -44,7 +44,17 @@ def index():
 
 @app.route('/quiz')
 def quiz():
-    return render_template('quiz.html')
+    return render_template("quiz.html")
+
+
+@app.route('/project')
+def project():
+    return render_template("project.html")
+
+
+@app.route('/course')
+def course():
+    return render_template("course.html")
 
 
 if __name__ == "__main__":

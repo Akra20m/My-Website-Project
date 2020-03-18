@@ -89,7 +89,7 @@ h1 {
 }
 
 .one {
-  background-image: linear-gradient(rgba(2, 12, 27, 1), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
     url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -106,6 +106,10 @@ h1 {
   min-height: 60vh;
   margin-bottom: 2%;
   margin-top: 2%;
+}
+
+.container-custom-courses {
+  min-height: 35vh;
 }
 
 .button-custom {
@@ -181,6 +185,7 @@ h1 {
 .project-description {
   background-color: rgba(256, 256, 256, 0.5);
   padding-bottom: 8px;
+  border-radius: 10px;
 }
 
 .project-title {
@@ -218,12 +223,73 @@ a.disabled {
   margin: 2px auto;
 }
 
-@media only screen and (max-width: 500px) {
+.card-custom {
+  padding: 0;
+  margin: 10px auto;
+  width: 22rem;
+}
+
+.row-custom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-custom {
+  border: 1px solid rgba(2, 7, 10, 0.5);
+}
+
+.card-body-custom {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-button {
+  margin-top: auto;
+}
+
+.course-title {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.course-title:hover {
+  text-decoration: none;
+}
+
+.link-projects {
+  color: black;
+  border-radius: 25px;
+  border: 3px solid white;
+  padding: 0.7rem 1em;
+  margin: 10px 30%;
+  background: gray;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 992px) {
   .custom-action-button {
     margin-bottom: 0.8rem !important;
   }
   .hero-buttons-container {
     margin-top: 2rem !important;
     display: inline-block;
+  }
+  .course-title {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .course-title {
+    font-size: 1rem;
+  }
+  .link-projects {
+    margin: 10px 20%;
   }
 }
