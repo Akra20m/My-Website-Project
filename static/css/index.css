@@ -272,6 +272,9 @@ a.disabled {
   font-weight: 800;
 }
 
+.text-style {
+  text-align: justify;
+}
 @media only screen and (max-width: 992px) {
   .custom-action-button {
     margin-bottom: 0.8rem !important;
