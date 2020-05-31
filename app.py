@@ -58,6 +58,5 @@ def course():
 
 
 if __name__ == "__main__":
-    app.config['SESSION_TYPE'] = 'filesystem'
     app.debug = True
     app.run()

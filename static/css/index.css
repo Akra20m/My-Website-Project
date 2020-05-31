@@ -8,13 +8,13 @@ html {
 }
 
 p {
-  font-family: "Questrial", sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1.2rem;
 }
 
 h1,
 h2 {
-  font-family: "Saira", sans-serif;
+  font-family: 'Saira', sans-serif;
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 }
 
 .section-title {
-  font-family: "Saira", sans-serif;
+  font-family: 'Saira', sans-serif;
   font-size: 2rem;
 }
 
@@ -38,7 +38,7 @@ h1 {
 }
 
 .nav-link-custom p::after {
-  content: "";
+  content: '';
   width: 0%;
   height: 2px;
   background-color: #a1d8ff;
@@ -79,7 +79,7 @@ h1 {
 }
 
 .heading-role {
-  font-family: "Questrial", sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1.7rem;
   font-weight: 300;
 }
@@ -90,7 +90,7 @@ h1 {
 
 .one {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
-    url("../images/background.jpg");
+    url('../images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -139,7 +139,7 @@ h1 {
 }
 
 .custom-action-button::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   top: 0;
@@ -275,6 +275,11 @@ a.disabled {
 .text-style {
   text-align: justify;
 }
+
+.card-custom:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 @media only screen and (max-width: 992px) {
   .custom-action-button {
     margin-bottom: 0.8rem !important;
