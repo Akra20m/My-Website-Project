@@ -21,6 +21,10 @@ h1 {
   font-size: 3rem;
 }
 
+.logo-img {
+  width: 130px;
+  margin: -25px;
+}
 .section-title {
   font-family: 'Saira', sans-serif;
   font-size: 2rem;
