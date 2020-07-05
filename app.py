@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_sslify import SSLify
 import os
 
 
@@ -7,6 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 # app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('LOCALPW')
 app.secret_key = os.environ.get('SECRET_KEY')
+sslify = SSLify(app)
 
 db = SQLAlchemy(app)
 
@@ -58,5 +60,5 @@ def course():
 
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = False
     app.run()
